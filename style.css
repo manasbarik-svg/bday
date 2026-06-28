@@ -1,0 +1,169 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+
+    /* Realistic mountain and river background */
+    background:
+    linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.overlay{
+    position:fixed;
+    width:100%;
+    height:100%;
+    backdrop-filter:blur(2px);
+}
+
+.container{
+    position:relative;
+    z-index:10;
+    width:90%;
+    max-width:1000px;
+    margin:50px auto;
+    padding:40px;
+
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+
+    border-radius:30px;
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+
+    text-align:center;
+    color:white;
+}
+
+h1{
+    font-size:60px;
+    text-shadow:0 0 20px white;
+}
+
+.subtitle{
+    font-size:22px;
+    margin:20px 0;
+}
+
+.gallery{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin:30px 0;
+}
+
+.photo{
+    width:280px;
+    height:360px;
+    object-fit:cover;
+
+    border-radius:25px;
+    border:4px solid white;
+
+    transition:0.5s;
+    box-shadow:0 0 25px rgba(255,255,255,0.5);
+}
+
+.photo:hover{
+    transform:scale(1.08);
+}
+
+#cake{
+    width:250px;
+    margin:20px 0;
+}
+
+button{
+    padding:14px 28px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+
+    font-size:17px;
+    font-weight:600;
+
+    background:rgba(255,255,255,0.9);
+    color:#2196f3;
+
+    margin:10px;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-5px);
+}
+
+.cloud{
+    position:absolute;
+    width:250px;
+    opacity:0.8;
+}
+
+.cloud1{
+    top:60px;
+    left:-250px;
+    animation:cloudMove 45s linear infinite;
+}
+
+.cloud2{
+    top:180px;
+    left:-350px;
+    animation:cloudMove 60s linear infinite;
+}
+
+@keyframes cloudMove{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(2200px);
+    }
+}
+
+.sticker{
+    position:fixed;
+    font-size:45px;
+    animation:float 4s ease-in-out infinite;
+}
+
+.star{
+    top:15%;
+    left:8%;
+}
+
+.teddy{
+    bottom:15%;
+    left:8%;
+}
+
+.heart{
+    top:20%;
+    right:10%;
+}
+
+.bird{
+    bottom:20%;
+    right:10%;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+}
+
